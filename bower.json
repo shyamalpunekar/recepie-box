@@ -1,0 +1,17 @@
+{
+  "name": "recipe-box-app",
+  "description": "",
+  "main": "",
+  "authors": [
+    "shy"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
