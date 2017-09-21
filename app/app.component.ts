@@ -34,7 +34,7 @@ export class AppComponent {
       ['sugar', 'salt','eggs','milk' , 'baking soda', 'all-purpose flour' , 'vegetable oil'],
       ['1. Heat Oven', '2. Mix all ingredients' , '3. Drop a dough' , '4. Bake 5-8 minutes']),
       new Recipe(
-        'Chocolate Chip Cookies',
+        'Crispy chicken',
         ['chicken', 'garlic salt','corn flour','paprika' , 'baking soda', 'all-purpose flour'],
         ['1. Heat oil in a pan', '2. Mix all ingredients' , '3. Drop a chicken' , '4. Fry it in a pan']
       )
