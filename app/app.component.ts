@@ -8,15 +8,33 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  currentFocus: String = 'Angular Recipe';
+    currentTime = new Date();
+    month: number = this.currentTime.getMonth() + 1;
+    day: number = this.currentTime.getDate();
+    year: number = this.currentTime.getFullYear();
+
+    recipes: Recipe[] = [
+      new Recipe('Chocolate Chip Cookies',
+      ['granulated sugar', 'salt','brown sugar','nuts' , 'baking soda', 'all-purpose flour'],
+      ['1. Heat Oven', '2. Mix all ingredients' , '3. Drop a dough' , '4. Bake 8-10 minutes']),
+      new Recipe('Vanilla Cup Cake',
+      ['sugar', 'salt','eggs','milk' , 'baking soda', 'all-purpose flour' , 'vegetable oil'],
+      ['1. Heat Oven', '2. Mix all ingredients' , '3. Drop a dough' , '4. Bake 5-8 minutes']),
+      new Recipe(
+        'Chocolate Chip Cookies',
+        ['chicken', 'garlic salt','corn flour','paprika' , 'baking soda', 'all-purpose flour'],
+        ['1. Heat oil in a pan', '2. Mix all ingredients' , '3. Drop a chicken' , '4. Fry it in a pan']
+      )
+    ];
 
 }
 
 
 export class Recipe{
 
-  constructor(public title: String, public ingredients: String[] , public directions: String[]){
+  constructor(public title: String, public ingredients: String[] , public directions: String[]){}
 
-  }
 }
 
 
