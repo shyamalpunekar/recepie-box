@@ -1,6 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector : 'app-root',
+  template: `
+
+  `
+})
+
+export class AppComponent {
+
+}
 
 
+export class Recipe{
 
+  constructor(public title: String, public ingredients: String[] , public directions: String[]){
+
+  }
+}
 
 
 
