@@ -3,7 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector : 'app-root',
   template: `
+  <div class= "container">
+    <h1>Recipe Box {{month}}/{{day}}/{{year}}</h1>
+    <h3>{{currentFocus}}</h3>
+      <div *ngFor = "let currentRecipe of recipes">
+      <h4 (click) = "showRecipe(currentRecipe)">{{currentRecipe.title}}</h4>
+     </div>
 
+     <div *ngIf = "selectedRecipe">
+       <h5> Ingredients: </h5>
+         <li *ngFor = "let ingredient of selectedRecipe.ingredients">{{ingredient}}</li>
+       <h5> Directions: </h5>
+         <li *ngFor = "let direction of selectedRecipe.directions">{{direction}}</li>
+     </div>
   `
 })
 
@@ -28,24 +40,17 @@ export class AppComponent {
       )
     ];
 
+    selectedRecipe: Recipe = null;
+    showRecipe(clickedRecipe){
+      this.selectedRecipe = clickedRecipe;
+    }
 }
-
 
 export class Recipe{
 
   constructor(public title: String, public ingredients: String[] , public directions: String[]){}
 
 }
-
-
-
-
-
-
-
-
-
-
 
 // import { Component } from '@angular/core';
 //
